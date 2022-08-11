@@ -1,7 +1,5 @@
 #include "HumanB.hpp"
 
-class HumanB
-{
-    HumanB()
-    {};
+class HumanB {
+  HumanB(){};
 };

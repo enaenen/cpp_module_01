@@ -1,26 +1,26 @@
-#include "Zombie.hpp"
 #include <iostream>
 
-int main(int argc, char* argv[])
-{
-    std::string zombieName;
+#include "Zombie.hpp"
 
-    if (argc > 1)
-        zombieName = argv[1];
-    else
-        zombieName = "Foo";
+int main(int argc, char* argv[]) {
+  std::string zombieName;
 
-	 std::cout << "================ newZombie ================" << std::endl;
-	 Zombie* zombie = newZombie(zombieName);
-	 zombie->announce();
-	 delete zombie;
-	 std::cout << "===========================================" << std::endl;
+  if (argc > 1)
+    zombieName = argv[1];
+  else
+    zombieName = "Foo";
 
-    std::cout << std::endl << std::endl;
+  std::cout << "================ newZombie ================" << std::endl;
+  Zombie* zombie = newZombie(zombieName);
+  zombie->announce();
+  delete zombie;
+  std::cout << "===========================================" << std::endl;
 
-    std::cout << "================ randomChump ================" << std::endl;
-    randomChump(zombieName);
-    std::cout << "================================================" << std::endl;
+  std::cout << std::endl << std::endl;
 
-    return 0;
+  std::cout << "================ randomChump ================" << std::endl;
+  randomChump(zombieName);
+  std::cout << "================================================" << std::endl;
+
+  return 0;
 }
