@@ -1,14 +1,15 @@
-#include "Zombie.hpp"
 #include <sstream>
 
-Zombie* zombieHorde(int n, std::string name)
-{
-    Zombie* zombies = new Zombie[n];
-    for (int i = 0; i < n; i++)
-    {
-        std::stringstream ss;
-        ss << i << " " << name;
-        zombies[i].setName(ss.str());
-    }
-    return zombies;
+#include "Zombie.hpp"
+
+Zombie* zombieHorde(int N, std::string name) {
+  Zombie* zombies = new Zombie[N];
+  std::stringstream ss;
+
+  for (int i = 0; i < N; i++) {
+    ss << i << " " << name;
+    zombies[i].setName(ss.str());
+    ss.str("");
+  }
+  return zombies;
 }
