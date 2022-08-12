@@ -1,8 +1,6 @@
 #include "Weapon.hpp"
 
-Weapon::Weapon() {}
-
-Weapon::Weapon(const std::string& type) { this->type = type; }
+Weapon::Weapon(const std::string& type) : type(type) {}
 
 Weapon::~Weapon() { std::cout << "Destroy Weapon" << std::endl; }
 
