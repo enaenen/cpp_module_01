@@ -3,7 +3,6 @@
 #include <iostream>
 
 HumanB::HumanB(const std::string& name) : weapon(NULL), name(name) {}
-HumanB::~HumanB() { std::cout << "Human Detroy" << std::endl; }
 
 void HumanB::attack() {
   if (this->weapon)
