@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
   }
 
   // input file open
-  std::ifstream inputFile(fileName);
+  std::ifstream inputFile(fileName.c_str());
   // input file ValidChecking
   if (inputFile.fail() || inputFile.eof() || !inputFile.is_open()) {
     std::cout << "invalid file" << std::endl;
@@ -29,7 +29,8 @@ int main(int argc, char **argv) {
   }
 
   // output file settings
-  std::ofstream outputFile("copyof_" + fileName, std::ios_base::out);
+  std::ofstream outputFile;
+  outputFile.open((fileName + ".replace").c_str());
   outputFile << "xxxx" << std::endl;
   std::string readString;
   while (getline(inputFile, readString)) {
