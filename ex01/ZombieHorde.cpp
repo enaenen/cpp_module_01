@@ -11,7 +11,5 @@ Zombie* zombieHorde(int N, std::string name) {
     zombies[i].setName(ss.str());
     ss.str(std::string());
   }
-  while (1) {
-  }
   return zombies;
 }
