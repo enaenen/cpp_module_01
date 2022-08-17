@@ -7,8 +7,7 @@ int main(int argc, char** argv) {
   if (1 < argc)
     zombieName = argv[1];
   else
-    zombieName = "Foo";
-
+    zombieName = "Default";
   int n;
   if (2 < argc)
     n = atoi(argv[2]);
@@ -16,10 +15,10 @@ int main(int argc, char** argv) {
     n = 1;
   if (n < 0) {
     std::cout << "N out of range (minimum 0)" << std::endl;
-    return 1;
+    return (1);
   }
   Zombie* horde = zombieHorde(n, zombieName);
   for (int i = 0; i < n; i++) horde[i].announce();
   delete[] horde;
-  return 0;
+  return (0);
 }

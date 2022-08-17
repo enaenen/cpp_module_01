@@ -13,7 +13,6 @@ void Harl::complain(std::string level) {
     if (level.compare(tmp[i]) == 0) break;
     i++;
   }
-
   switch (i) {
     case DEBUG:
       std::cout << "[DEBUG] " << std::endl;
